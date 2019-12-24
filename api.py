@@ -62,7 +62,7 @@ def login():
         passwd2 = d["_source"]["password"]
         if passwd1 == passwd2:
             response_obj = {
-                'message': 'user or password incorrect',
+                'message': 'Welcome to ArguNest!',
                 'key': hashlib.md5(str(datetime.now().microsecond)).hexdigest()}
             new_key(uid,response_obj['key'])
         else:
