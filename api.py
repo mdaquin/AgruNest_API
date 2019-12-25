@@ -19,6 +19,14 @@ def create_doc(index, id, obj):
     r=requests.put('http://localhost:9200/'+index+'/_doc/'+id, json=obj)
     return json.loads(r.text)
 
+def search(index, query, size):
+    r = ''
+    if query == None:
+        r=requests.get('http://localhost:9200/'+index+'/_search?size='+str(size))
+    else:
+        r=requests.get('http://localhost:9200/'+index+'/_search?size='+str(size)+'&q='+query)
+    return json.loads(r.text)
+
 def new_key(uid, key):
     for k in userkeys:
         if "uid" in userkeys[k] and userkeys[k]["uid"] == uid:
@@ -26,6 +34,53 @@ def new_key(uid, key):
     userkeys[key] = {"uid": uid, "valid": True}
     print(userkeys)
 
+@app.route('/text', methods=['POST'])
+@cross_origin()
+def load_text():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    key = data["key"].encode('utf-8')
+    tid = data["id"].encode('utf-8')
+    if key in userkeys and "uid" in userkeys[key]:
+        d = get_doc('argunest_texts', tid)
+        text = ''
+        with open(d["_source"]["path"], 'r') as reader:
+            text = reader.read()
+        response_obj = {"message": "text loaded", "text": text}        
+    else:
+        response_obj = {'error': 'user not logged in'}        
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+
+@app.route('/texts', methods=['POST'])
+@cross_origin()
+def list_texts():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    key = data["key"].encode('utf-8')
+    if key in userkeys and "uid" in userkeys[key]:
+        fes = search("argunest_texts", None, 100)
+        result = {"message": "list of texts retrieved", "list": []}
+        if "hits" in fes and "hits" in fes["hits"]:
+            for o in fes["hits"]["hits"]:
+                nr ={"id": o["_id"], "title": o["_source"]["title"]}
+                result["list"].append(nr)
+            response_obj = result
+        else:
+            response_obj = {'error': 'could not get list of text'}
+    else:
+        response_obj = {'error': 'user not logged in'}        
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+    
 @app.route('/register', methods=['POST'])
 @cross_origin()
 def register():
