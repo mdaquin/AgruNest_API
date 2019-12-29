@@ -19,6 +19,10 @@ def create_doc(index, id, obj):
     r=requests.put('http://localhost:9200/'+index+'/_doc/'+id, json=obj)
     return json.loads(r.text)
 
+def delete_doc(index, id):    
+    r=requests.delete('http://localhost:9200/'+index+'/_doc/'+id)
+    return json.loads(r.text)
+
 def search(index, query, size):
     r = ''
     if query == None:
@@ -46,7 +50,13 @@ def load_text():
         text = ''
         with open(d["_source"]["path"], 'r') as reader:
             text = reader.read()
-        response_obj = {"message": "text loaded", "text": text}        
+        annotations = []
+        query = "user:"+userkeys[key]["uid"]+"+AND+doc:"+tid
+        hits = search("argunest_annotations", query, 1000)
+        if "hits" in hits and "hits" in hits["hits"]:
+            for ann in hits["hits"]["hits"]:
+                annotations.append(ann["_source"])
+        response_obj = {"message": "text loaded", "text": text, "annotations": annotations}
     else:
         response_obj = {'error': 'user not logged in'}        
     response = app.response_class(
@@ -55,6 +65,51 @@ def load_text():
         mimetype='application/json'
     )
     return response
+
+@app.route('/annotation', methods=['POST'])
+@cross_origin()
+def add_annotation():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    key = data["user"].encode('utf-8')
+    aid = data["id"].encode('utf-8')
+    if key in userkeys and "uid" in userkeys[key]:
+        uid = userkeys[key]["uid"]
+        data["user"] = uid
+        create_doc("argunest_annotations", aid, data)
+        response_obj = {"message": "Annotation saved", "id": aid}     
+    else:
+        response_obj = {'error': 'user not logged in'}        
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+
+@app.route('/annotation/delete', methods=['POST'])
+@cross_origin()
+def delete_annotation():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    key = data["key"].encode('utf-8')
+    aid = data["aid"].encode('utf-8')
+    if key in userkeys and "uid" in userkeys[key]:
+        uid = userkeys[key]["uid"]
+        data["user"] = uid
+        d = delete_doc("argunest_annotations", aid)
+        print(d)
+        response_obj = {"message": "Annotation deleted", "id": aid}     
+    else:
+        response_obj = {'error': 'user not logged in'}        
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+
+
 
 @app.route('/texts', methods=['POST'])
 @cross_origin()
