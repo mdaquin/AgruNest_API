@@ -4,6 +4,7 @@ import json
 import hashlib
 import requests
 from datetime import datetime
+import urllib
 
 app = Flask('argunest_api')
 cors = CORS(app)
@@ -57,6 +58,65 @@ def load_text():
             for ann in hits["hits"]["hits"]:
                 annotations.append(ann["_source"])
         response_obj = {"message": "text loaded", "text": text, "annotations": annotations}
+    else:
+        response_obj = {'error': 'user not logged in'}        
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+
+
+def already_there(a,i):
+    for j in a:
+        if j["id"] == i:
+            return True
+    return False
+
+
+@app.route('/ann_graph', methods=['POST'])
+@cross_origin()
+def annotation_graph():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    key = data["key"].encode('utf-8')
+    aid = data["id"].encode('utf-8')
+    nodes = []
+    if key in userkeys and "uid" in userkeys[key]:
+        ann1 = get_doc('argunest_annotations', aid)
+        # add link to other annotations
+        node1 = { 
+            "id": aid,
+            "label": ann1["_source"]["title"],
+            "type": ann1["_source"]["type"],
+            "linkto": []
+        }
+        nodes.append(node1)
+        for concept in ann1["_source"]["topics"]:
+            if concept != "none":
+                nodec = {
+                    "id": concept,
+                    "label": concept,
+                    "type": "concept",
+                    "linkto": []
+                }
+                if not already_there(nodes, concept):
+                    nodes.append(nodec)
+                node1["linkto"].append(concept)
+                query = "topics:"+urllib.quote_plus(concept)
+                hits = search("argunest_annotations", query, 1000)
+                if "hits" in hits and "hits" in hits["hits"]:                
+                    for ann in hits["hits"]["hits"]:
+                        node = {        
+                            "id": ann["_id"],
+                            "label": ann["_source"]["title"],
+                            "type": ann["_source"]["type"],
+                            "linkto": ann["_source"]["topics"]
+                        }
+                        if not already_there(nodes, node["id"]):
+                            nodes.append(node)
+        response_obj = {"message": "graph created loaded", "nodes": nodes}
     else:
         response_obj = {'error': 'user not logged in'}        
     response = app.response_class(
