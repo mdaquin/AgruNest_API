@@ -57,7 +57,20 @@ def load_text():
         if "hits" in hits and "hits" in hits["hits"]:
             for ann in hits["hits"]["hits"]:
                 annotations.append(ann["_source"])
-        response_obj = {"message": "text loaded", "text": text, "annotations": annotations}
+        relations = {}
+        query = "user:"+userkeys[key]["uid"]+"+AND+doc:"+tid
+        hits = search("argunest_relations", query, 1000)
+        if "hits" in hits and "hits" in hits["hits"]:
+            for rels in hits["hits"]["hits"]:
+                origin = rels["_source"]["origin"]
+                relation = rels["_source"]["relation"]
+                target = rels["_source"]["target"]
+                if origin not in relations:
+                    relations[origin] = {}
+                if relation not in relations[origin]:
+                    relations[origin][relation] = []
+                relations[origin][relation].append(target)
+        response_obj = {"message": "text loaded", "text": text, "annotations": annotations, "relations": relations}
     else:
         response_obj = {'error': 'user not logged in'}        
     response = app.response_class(
@@ -74,6 +87,21 @@ def already_there(a,i):
             return True
     return False
 
+
+def getRelations(aaid):
+    query='origin:"'+aaid+'"'
+    h = search('argunest_relations', query, 1000)
+    result = {"supports": [], "contradicts": [], "same": []} 
+    if 'hits' in h and 'hits' in h['hits']:
+        for i in h['hits']['hits']:
+            if "_source" in i:
+                if i["_source"]["relation"] == "supports":
+                    result["supports"].append(i["_source"]["target"])
+                if i["_source"]["relation"] == "contradicts":
+                    result["contradicts"].append(i["_source"]["target"])
+                if i["_source"]["relation"] == "same":
+                    result["same"].append(i["_source"]["target"])
+    return result
 
 @app.route('/ann_graph', methods=['POST'])
 @cross_origin()
@@ -92,7 +120,11 @@ def annotation_graph():
             "type": ann1["_source"]["type"],
             "linkto": []
         }
-        nodes.append(node1)
+        rels = getRelations(aid)
+        node1["supports"] = rels["supports"]
+        node1["contradicts"] = rels["contradicts"]
+        node1["same"] = rels["same"]        
+        nodes.append(node1)        
         for concept in ann1["_source"]["topics"]:
             if concept != "none":
                 nodec = {
@@ -114,8 +146,57 @@ def annotation_graph():
                             "type": ann["_source"]["type"],
                             "linkto": ann["_source"]["topics"]
                         }
+                        rels = getRelations(ann["_id"])
+                        node["supports"] = rels["supports"]
+                        node["contradicts"] = rels["contradicts"]
+                        node["same"] = rels["same"]        
                         if not already_there(nodes, node["id"]):
                             nodes.append(node)
+        response_obj = {"message": "graph created loaded", "nodes": nodes}
+    else:
+        response_obj = {'error': 'user not logged in'}        
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+
+@app.route('/graph', methods=['POST'])
+@cross_origin()
+def large_graph():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    print(data)
+    key = data["key"].encode('utf-8')
+    doc = data["doc"]
+    nodes = []
+    if key in userkeys and "uid" in userkeys[key]:
+        query = "user:"+userkeys[key]["uid"]+"+AND+doc:"+doc
+        hits = search("argunest_annotations", query, 1000)
+        if "hits" in hits and "hits" in hits["hits"]:
+            for ann in hits["hits"]["hits"]:
+                node = { 
+                    "id": ann["_id"],
+                    "label": ann["_source"]["title"],
+                    "type": ann["_source"]["type"],
+                    "linkto": ann["_source"]["topics"]
+                }
+                rels = getRelations(ann["_id"])
+                node["supports"] = rels["supports"]
+                node["contradicts"] = rels["contradicts"]
+                node["same"] = rels["same"]        
+                if not already_there(nodes, node["id"]):
+                    nodes.append(node)
+                for concept in ann["_source"]["topics"]:
+                    if not already_there(nodes, concept):
+                        nodet = { 
+                            "id": concept,
+                            "label": concept,
+                            "type": "concept",
+                            "linkto": []
+                        }
+                        nodes.append(nodet)
         response_obj = {"message": "graph created loaded", "nodes": nodes}
     else:
         response_obj = {'error': 'user not logged in'}        
@@ -147,6 +228,36 @@ def add_annotation():
     )
     return response
 
+@app.route('/relation', methods=['POST'])
+@cross_origin()
+def add_relation():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    key    = data["key"].encode('utf-8')
+    origin = data["origin"].encode('utf-8')
+    rel    = data["relation"].encode('utf-8')
+    target = data["target"].encode('utf-8')
+    doc    = data["doc"].encode('utf-8')
+    if key in userkeys and "uid" in userkeys[key]:
+        uid = userkeys[key]["uid"]
+        data["user"] = uid
+        rid = hashlib.md5(data["user"].encode('utf-8')+
+                          str(data["doc"])+
+                          data["origin"]+
+                          data["relation"]+
+                          data["target"]).hexdigest()
+        create_doc("argunest_relations", rid, data)
+        response_obj = {"message": "Relation saved", "id": rid}     
+    else:
+        response_obj = {'error': 'user not logged in'}        
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
+
+
 @app.route('/annotation/delete', methods=['POST'])
 @cross_origin()
 def delete_annotation():
@@ -170,6 +281,36 @@ def delete_annotation():
     return response
 
 
+@app.route('/relation/delete', methods=['POST'])
+@cross_origin()
+def delete_relation():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    key = data["key"].encode('utf-8')
+    key    = data["key"].encode('utf-8')
+    origin = data["origin"].encode('utf-8')
+    rel    = data["relation"].encode('utf-8')
+    target = data["target"].encode('utf-8')
+    doc    = data["doc"].encode('utf-8')
+    if key in userkeys and "uid" in userkeys[key]:
+        uid = userkeys[key]["uid"]
+        data["user"] = uid
+        rid = hashlib.md5(data["user"].encode('utf-8')+
+                          str(data["doc"])+
+                          data["origin"]+
+                          data["relation"]+
+                          data["target"]).hexdigest()        
+        d = delete_doc("argunest_relations", rid)
+        print(d)
+        response_obj = {"message": "Relation deleted", "id": rid}     
+    else:
+        response_obj = {'error': 'user not logged in'}        
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
 
 @app.route('/texts', methods=['POST'])
 @cross_origin()
