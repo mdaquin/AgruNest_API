@@ -136,7 +136,7 @@ def annotation_graph():
                 if not already_there(nodes, concept):
                     nodes.append(nodec)
                 node1["linkto"].append(concept)
-                query = "topics:"+urllib.quote_plus(concept)
+                query = "topics:"+urllib.quote_plus(concept)+'+AND+user:'+userkeys[key]['uid']+'+AND+doc:'+ann1["_source"]["doc"]
                 hits = search("argunest_annotations", query, 1000)
                 if "hits" in hits and "hits" in hits["hits"]:                
                     for ann in hits["hits"]["hits"]:
