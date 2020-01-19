@@ -51,6 +51,7 @@ def load_text():
         text = ''
         with open(d["_source"]["path"], 'r') as reader:
             text = reader.read()
+        taxonomy = d["_source"]["taxonomy"]
         annotations = []
         query = "user:"+userkeys[key]["uid"]+"+AND+doc:"+tid
         hits = search("argunest_annotations", query, 1000)
@@ -70,7 +71,7 @@ def load_text():
                 if relation not in relations[origin]:
                     relations[origin][relation] = []
                 relations[origin][relation].append(target)
-        response_obj = {"message": "text loaded", "text": text, "annotations": annotations, "relations": relations}
+        response_obj = {"message": "text loaded", "text": text, "annotations": annotations, "relations": relations, "taxonomy": taxonomy}
     else:
         response_obj = {'error': 'user not logged in'}        
     response = app.response_class(

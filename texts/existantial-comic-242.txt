@@ -1,72 +1,72 @@
-<i>Existantial comic 242 - Philosophy roundtable: Human nature - http://existentialcomics.com/comic/242</i>
+<i>Existential comic 242 - Philosophy roundtable: Human nature - <a target="_blank" href="http://existentialcomics.com/comic/242">http://existentialcomics.com/comic/242</a></i>
 
-<p>
-Okay. Welcome to philosopher roundtable, today's topic: What is the difference between humans and animals. We have with us five eminent philosophers to discuss the question: Aristotle, Heidegger, Descartes, Nietzshe, and Kierkegaard. Aristotle, we'll start with you. 
+<p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
+Panel 1<br/>
+De Beauvoir: Okay, welcome to philosopher’s roundtable, today’s topic: What is the difference between humans and animals?
 </p>
 
-<p>
-Man is the animal that can reason. We are the only animal that can use our power of understanding and intellect to overcome our base instincts. Animals have only the base instinct, and no capacity for higher reason. 
+<p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
+Panel 2<br/>
+De Beauvoir: We have with us five eminent philosophers to discuss the question: Aristotle, Heidegger, Descartes, Nietzsche, and Kierkegaard. Aristotle, we'll start with you
 </p>
 
-<p>
-Heidegger, do you agree?
+<p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
+Panel 3<br/>
+Aristotle: Man is the animal that can reason. We are the only animal that can use our power of understanding and intellect to overcome our base instincts. Animals have only the base instinct, and no capacity for higher reason.
 </p>
 
-<p>
-It isn't reason, but language that separates man from beast. Through language we come to name things, and form the basis of thought. Through language mankind is able to build a world for himself through which he understands his condition. 
+<p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
+Panel 4<br/>
+De Beauvoir: Heidegger, do you agree?
+Heidegger: It isn’t reason, but language that separates man from beast. Through language we come to name things, and form the basis of thought. Through language mankind is able to build a world for himself through which he understands his condition.
 </p>
 
-<p>
-Descartes, what do you think?
+<p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
+Panel 5<br/>
+De Beauvoir: Descartes, what do you think?
+Descartes: The answer is much simpler: Humans are the only creature with a soul - the only  creature that has freedom, thoughts, experiences and feelings.
 </p>
 
-<p>
-The answer is much simpler: Humans are the only creature with a soul - the only creature that has freedom, thoughts, experiences and feelings.
+<p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
+Panel 6<br/>
+De Beauvoir: Wait, you don't think animals have feelings and experiences?
+Descartes: Animals may appear to scream out in pain, but it is only a mechanical reaction,   like the sound of a tea kettle makes.
+De Beauvoir: Okay... I hope you don't own any pets...
 </p>
 
-<p>
-Wait, you don't think animals have feelings and experiences?
+<p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
+Panel 7<br/>
+De Beauvoir: Nietzsche, your thoughts?
+Nietzsche: Reason? Language? Feeling? No, that is not what has made us what we are. Man is the only creature that is entitled to make promises.
 </p>
 
-<p>
-Animals may appear to scream out in pain, but it is only a mechanical reaction, like the sound of a tea kettle makes. 
+<p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
+Panel 8<br/>
+Nietzsche: To fully become a human means to become such a creature, a man with an independent, enduring will. Only through this kind of will, proud and strong, can a man dare to become what he is.
 </p>
 
-<p>
-Okay... I hope you don't own any pets... Nietzsche, your thoughts?
+<p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
+Panel 9<br/>
+De Beauvoir: And you Kierkegaard, what do you think a human is?
+Kierkegaard: Huh? What?
+De Beauvoir: What is a human being?
+Kierkegaard: Oh right, that's easy.
 </p>
 
-<p>Reason? Language? Feelings? No, that is no what has made us what we are. Man is the only creature that is entitled to make promises. To fully become human means to become such a creature, a man with an independent, enduring will. Only through this kind of will, proud and strong, can a man dare to become what he is.
+<p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
+Panel 10<br/>
+Kierkegaard: A human is an animal that is sad all the time for no reason.
 </p>
 
-<p>
-And you kierkegaard, what do you think a human is?
+<p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
+Panel 11<br/>
+Kierkegaard: Man is the animal that is in a constant state of profound, inescapable despair every single moment of their wretched, brief lives.
+De Beauvoir: Uh... Every moment, even right now?
+Kierkegaard: Especially right now, de Beauvoir.
 </p>
 
-<p>
-Huh? What?
-</p>
-
-<p>
-What is a human being?
-</p>
-
-<p>
-Oh right, that's easy.
-</p>
-
-<p>
-A human is an animal that is sad all the time for no reason. Man is the animal that is in a constant state of profound, inescapable despair every single moment	of their wretched, brief lives.
-</p>
-
-<p>
-Uh... Every moment, even right now?
-</p>
-
-<p>
-Especially right now, De Beauvoir. Wouldn't anyone rather be a dog, happilly chasing a ball in the park, instead of answering these pointless questions while knowing full well that death is lurking, coming for us all in what amounts to little more than a few moments?
-</p>
-
-<p>
-Well, there you have it, I guess. 
+<p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
+Panel 12<br/>
+Kierkegaard: Wouldn't anyone rather be a dog, happily chasing a ball in the park, instead of answering these pointless questions while knowing full well that death is lurking, coming for us all in what amounts to little more than a few moments?
+De Beauvoir: Well, there you have it, I guess.
 </p>
