@@ -1,22 +1,17 @@
-from flask import Flask, request
-from flask_cors import CORS, cross_origin
 import hashlib
 import requests
 import math
 import re
 import json
 import os
-
-app = Flask('argunest_api')
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+import sys
 
 wdtermcache = {}
 caches = []
 countcache = {}
 N = 0
 
-path = 'cache/'
+path = 'cache2/'
 files = []
 for r, d, f in os.walk(path):
     for file in f:
@@ -25,7 +20,7 @@ for r, d, f in os.walk(path):
 
 files.sort()
 for cf in files:
-    with open('cache/'+str(cf)) as f:
+    with open('cache2/'+str(cf)) as f:
         caches.append(json.load(f))
 
 def getcount(t):
@@ -34,38 +29,18 @@ def getcount(t):
             return cache[t]        
     r = requests.get('http://localhost:9200/dbpedia_abstracts/_count?q='+t)
     caches[len(caches)-1][t] = r.json()["count"]
-    with open('cache/'+str(len(caches)-1), 'w') as outfile:
+    with open('cache2/'+str(len(caches)-1), 'w') as outfile:
         json.dump(caches[len(caches)-1], outfile)
     if len(caches[len(caches)-1]) > 50000:
         caches.append({})
     return r.json()["count"]
 
 
-@app.route('/def', methods=['POST'])
-@cross_origin()
-def definition():
+def load_text(wd_id, toassess):
     response_obj = {}
-    data = request.get_json(silent=True)
-    wd_id = data["id"].encode('utf-8')
-    uri = 'http://wikidata.dbpedia.org/resource/'+wd_id
-    id = hashlib.md5(uri).hexdigest()
-    r = requests.get('http://localhost:9200/dbpedia_abstracts/_doc/'+id)
-    # print(r.json())
-    dtext = r.json()["_source"]["text"]
-    response = app.response_class(
-        response=json.dumps({"definition": dtext}),
-        status=200,
-        mimetype='application/json'
-    )
-    return response    
-
-@app.route('/pmi', methods=['POST'])
-@cross_origin()
-def load_text():
-    response_obj = {}
-    data = request.get_json(silent=True)
-    wd_id = data["id"].encode('utf-8')
-    toassess  = data["text"].encode('utf-8')
+    #data = request.get_json(silent=True)
+    #wd_id = data["id"].encode('utf-8')
+    #toassess  = data["text"].encode('utf-8')
     uri = 'http://wikidata.dbpedia.org/resource/'+wd_id
     id = hashlib.md5(uri).hexdigest()
     r = requests.get('http://localhost:9200/dbpedia_abstracts/_count')
@@ -126,4 +101,17 @@ def load_text():
     )
     return response
 
-app.run(port=5001)
+# app.run(port=5001)
+
+# load text version of excerpts
+# get id from params
+# run
+
+text = ""
+with open('texts/e-r.txt', 'r') as file:
+    text = file.read()
+
+qid = sys.argv[1]
+
+load_text(qid, text)
+
