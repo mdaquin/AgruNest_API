@@ -5,6 +5,7 @@ import hashlib
 import requests
 from datetime import datetime
 import urllib
+import time
 
 app = Flask('argunest_api')
 cors = CORS(app)
@@ -38,6 +39,30 @@ def new_key(uid, key):
             userkeys[k] = {"valid": False}
     userkeys[key] = {"uid": uid, "valid": True}
     print(userkeys)
+
+
+@app.route('/log', methods=['POST'])
+@cross_origin()
+def log():
+    response_obj = {'error': 'something wrong happened'}
+    data = request.get_json(silent=True)
+    key  = data["key"].encode('utf-8')
+    mess = data["message"].encode('utf-8')
+    par  = data["param"].encode('utf-8')
+    if key in userkeys and "uid" in userkeys[key]:
+        uid = userkeys[key]['uid']
+        ltime=int(round(time.time() * 1000))
+        lid = str(uid)+"-"+str(ltime)
+        print("logged "+lid)
+        lobj = {"id": lid, "uid": uid, "time": ltime, "message": mess, "param": par}
+        r = create_doc("argunest_logs", lid, lobj)
+    response_obj = {'OK': 'logged', 'id': lid}
+    response = app.response_class(
+        response=json.dumps(response_obj),
+        status=200,
+        mimetype='application/json'
+    )
+    return response
 
 @app.route('/text', methods=['POST'])
 @cross_origin()

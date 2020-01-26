@@ -17,27 +17,22 @@ Aristotle: Man is the animal that can reason. We are the only animal that can us
 
 <p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
 Panel 4<br/>
-De Beauvoir: Heidegger, do you agree?
-Heidegger: It isn’t reason, but language that separates man from beast. Through language we come to name things, and form the basis of thought. Through language mankind is able to build a world for himself through which he understands his condition.
+De Beauvoir: Heidegger, do you agree? Heidegger: It isn’t reason, but language that separates man from beast. Through language we come to name things, and form the basis of thought. Through language mankind is able to build a world for himself through which he understands his condition.
 </p>
 
 <p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
 Panel 5<br/>
-De Beauvoir: Descartes, what do you think?
-Descartes: The answer is much simpler: Humans are the only creature with a soul - the only  creature that has freedom, thoughts, experiences and feelings.
+De Beauvoir: Descartes, what do you think? Descartes: The answer is much simpler: Humans are the only creature with a soul - the only  creature that has freedom, thoughts, experiences and feelings.
 </p>
 
 <p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
 Panel 6<br/>
-De Beauvoir: Wait, you don't think animals have feelings and experiences?
-Descartes: Animals may appear to scream out in pain, but it is only a mechanical reaction,   like the sound of a tea kettle makes.
-De Beauvoir: Okay... I hope you don't own any pets...
+De Beauvoir: Wait, you don't think animals have feelings and experiences? Descartes: Animals may appear to scream out in pain, but it is only a mechanical reaction,   like the sound of a tea kettle makes. De Beauvoir: Okay... I hope you don't own any pets...
 </p>
 
 <p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
 Panel 7<br/>
-De Beauvoir: Nietzsche, your thoughts?
-Nietzsche: Reason? Language? Feeling? No, that is not what has made us what we are. Man is the only creature that is entitled to make promises.
+De Beauvoir: Nietzsche, your thoughts? Nietzsche: Reason? Language? Feeling? No, that is not what has made us what we are. Man is the only creature that is entitled to make promises.
 </p>
 
 <p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
@@ -47,10 +42,7 @@ Nietzsche: To fully become a human means to become such a creature, a man with a
 
 <p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
 Panel 9<br/>
-De Beauvoir: And you Kierkegaard, what do you think a human is?
-Kierkegaard: Huh? What?
-De Beauvoir: What is a human being?
-Kierkegaard: Oh right, that's easy.
+De Beauvoir: And you Kierkegaard, what do you think a human is? Kierkegaard: Huh? What? De Beauvoir: What is a human being? Kierkegaard: Oh right, that's easy.
 </p>
 
 <p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
@@ -60,13 +52,10 @@ Kierkegaard: A human is an animal that is sad all the time for no reason.
 
 <p style="text-align: center; width: 48%; float: left; border: 1px solid #999; padding: 5px;">
 Panel 11<br/>
-Kierkegaard: Man is the animal that is in a constant state of profound, inescapable despair every single moment of their wretched, brief lives.
-De Beauvoir: Uh... Every moment, even right now?
-Kierkegaard: Especially right now, de Beauvoir.
+Kierkegaard: Man is the animal that is in a constant state of profound, inescapable despair every single moment of their wretched, brief lives. De Beauvoir: Uh... Every moment, even right now? Kierkegaard: Especially right now, de Beauvoir.
 </p>
 
 <p style="text-align: center; width: 48%; float: right; border: 1px solid #999; padding: 5px;">
 Panel 12<br/>
-Kierkegaard: Wouldn't anyone rather be a dog, happily chasing a ball in the park, instead of answering these pointless questions while knowing full well that death is lurking, coming for us all in what amounts to little more than a few moments?
-De Beauvoir: Well, there you have it, I guess.
+Kierkegaard: Wouldn't anyone rather be a dog, happily chasing a ball in the park, instead of answering these pointless questions while knowing full well that death is lurking, coming for us all in what amounts to little more than a few moments? De Beauvoir: Well, there you have it, I guess.
 </p>
