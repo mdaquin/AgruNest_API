@@ -1,0 +1,20 @@
+{
+    "path": "texts/LT123.txt", 
+    "title": "The three texts above in one document",
+    "taxonomy": [
+       {"label": "Charity", "dbp_uri": "http://dbpedia.org/resource/Charity_(virtue)", "wdid": "Q456673"},
+       {"label": "Cause", "dbp_uri": "http://dbpedia.org/resource/Four_causes", "wdid": "Q3140529"},
+       {"label": "Occasionalism", "dbp_uri": "http://dbpedia.org/resource/Occasionalism", "wdid": "Q651345"},
+       {"label": "Desire ", "dbp_uri": "http://dbpedia.org/resource/Desire", "wdid": "Q775842"},
+       {"label": "God ", "dbp_uri": "http://dbpedia.org/resource/God", "wdid": "Q190"},
+       {"label": "Love ", "dbp_uri": "http://dbpedia.org/resource/Love", "wdid": "Q316"},
+       {"label": "Love of God", "dbp_uri": "http://dbpedia.org/resource/Love_of_God", "wdid": "Q967441"},
+       {"label": "Pain ", "dbp_uri": "http://dbpedia.org/resource/Pain_(philosophy)", "wdid": "Q4358242"},
+       {"label": "Pleasure ", "dbp_uri": "http://dbpedia.org/resource/Pleasure#Philosophies_of_pleasure", "wdid": "Q208195"},
+       {"label": "Sensation ", "dbp_uri": "http://dbpedia.org/resource/Sensation_(psychology)", "wdid": "Q3955369"},
+       {"label": "Soul ", "dbp_uri": "http://dbpedia.org/resource/Soul", "wdid": "Q9165"},
+       {"label": "Will of God ", "dbp_uri": "http://dbpedia.org/resource/Will_of_God", "wdid": "Q8003236"},
+       {"label": "Sociability", "dbp_uri": "http://dbpedia.org/resource/Sociality", "wdid": "Q3307505"},
+       {"label": "Object", "dbp_uri": "http://dbpedia.org/resource/Object_(philosophy)", "wdid": "Q488383"}
+     ]
+}

@@ -1,0 +1,998 @@
+ * Running on http://127.0.0.1:5002/ (Press CTRL+C to quit)
+127.0.0.1 - - [10/Feb/2020 11:12:50] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 11:24:44] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 12:58:10] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 12:59:12] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 12:59:33] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 13:01:15] "POST /graph HTTP/1.1" 200 -
+[2020-02-10 13:01:50,276] ERROR in app: Exception on /graph [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "get_graph.py", line 70, in large_graph
+    uid = r["hits"]["hits"][0]["_id"]
+IndexError: list index out of range
+127.0.0.1 - - [10/Feb/2020 13:01:51] "POST /graph HTTP/1.1" 500 -
+127.0.0.1 - - [10/Feb/2020 13:02:02] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 13:02:18] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 13:02:49] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 13:03:16] "POST /graph HTTP/1.1" 200 -
+[2020-02-10 13:04:03,914] ERROR in app: Exception on /graph [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "get_graph.py", line 70, in large_graph
+    uid = r["hits"]["hits"][0]["_id"]
+IndexError: list index out of range
+127.0.0.1 - - [10/Feb/2020 13:04:03] "POST /graph HTTP/1.1" 500 -
+127.0.0.1 - - [10/Feb/2020 13:04:07] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 13:04:41] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [10/Feb/2020 13:06:36] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2020 12:00:21] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:31:41] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:53:23] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:54:02] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:54:21] "POST /graph HTTP/1.1" 200 -
+[2020-05-20 10:54:42,659] ERROR in app: Exception on /graph [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    for name, c in (
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    When a teardown function was called because of an exception it will
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    exc_class, code = self._get_exc_class_and_code(type(e))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    def url_defaults(self, f):
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "get_graph.py", line 70, in large_graph
+    uid = r["hits"]["hits"][0]["_id"]
+IndexError: list index out of range
+127.0.0.1 - - [20/May/2020 10:54:42] "POST /graph HTTP/1.1" 500 -
+127.0.0.1 - - [20/May/2020 10:55:02] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:55:21] "POST /graph HTTP/1.1" 200 -
+[2020-05-20 10:55:43,264] ERROR in app: Exception on /graph [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    for name, c in (
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    When a teardown function was called because of an exception it will
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    exc_class, code = self._get_exc_class_and_code(type(e))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    def url_defaults(self, f):
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "get_graph.py", line 70, in large_graph
+    uid = r["hits"]["hits"][0]["_id"]
+IndexError: list index out of range
+127.0.0.1 - - [20/May/2020 10:55:43] "POST /graph HTTP/1.1" 500 -
+127.0.0.1 - - [20/May/2020 10:55:48] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:56:04] "POST /graph HTTP/1.1" 200 -
+[2020-05-20 10:56:45,200] ERROR in app: Exception on /graph [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    for name, c in (
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    When a teardown function was called because of an exception it will
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    exc_class, code = self._get_exc_class_and_code(type(e))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    def url_defaults(self, f):
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "get_graph.py", line 70, in large_graph
+    uid = r["hits"]["hits"][0]["_id"]
+IndexError: list index out of range
+127.0.0.1 - - [20/May/2020 10:56:45] "POST /graph HTTP/1.1" 500 -
+127.0.0.1 - - [20/May/2020 10:56:56] "POST /graph HTTP/1.1" 200 -
+[2020-05-20 10:57:21,379] ERROR in app: Exception on /graph [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    for name, c in (
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    When a teardown function was called because of an exception it will
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    exc_class, code = self._get_exc_class_and_code(type(e))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    def url_defaults(self, f):
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "get_graph.py", line 70, in large_graph
+    uid = r["hits"]["hits"][0]["_id"]
+IndexError: list index out of range
+127.0.0.1 - - [20/May/2020 10:57:21] "POST /graph HTTP/1.1" 500 -
+[2020-05-20 10:57:24,615] ERROR in app: Exception on /graph [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    for name, c in (
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    When a teardown function was called because of an exception it will
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    exc_class, code = self._get_exc_class_and_code(type(e))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    def url_defaults(self, f):
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "get_graph.py", line 70, in large_graph
+    uid = r["hits"]["hits"][0]["_id"]
+IndexError: list index out of range
+127.0.0.1 - - [20/May/2020 10:57:24] "POST /graph HTTP/1.1" 500 -
+127.0.0.1 - - [20/May/2020 10:57:29] "POST /graph HTTP/1.1" 200 -
+[2020-05-20 10:58:02,469] ERROR in app: Exception on /graph [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    for name, c in (
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    When a teardown function was called because of an exception it will
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    exc_class, code = self._get_exc_class_and_code(type(e))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+    def url_defaults(self, f):
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "get_graph.py", line 70, in large_graph
+    uid = r["hits"]["hits"][0]["_id"]
+IndexError: list index out of range
+127.0.0.1 - - [20/May/2020 10:58:02] "POST /graph HTTP/1.1" 500 -
+127.0.0.1 - - [20/May/2020 10:58:05] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:58:26] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:59:49] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 10:59:54] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 11:00:07] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 11:09:41] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 11:17:09] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 11:17:22] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 11:17:38] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 11:18:13] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2020 11:18:53] "POST /graph HTTP/1.1" 200 -
+ * Serving Flask app "argunest_api" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [15/Mar/2021 10:08:41] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:08:45] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:08:46] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:08:47] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:08:47] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:08:59] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:08:59] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:09:02] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:09:02] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:09:15] "POST /log HTTP/1.1" 200 -
+8
+7
+10
+4
+6
+11
+3
+13
+17
+15
+0
+14
+16
+5
+1
+12
+2
+9
+ * Serving Flask app "argunest_api" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+8
+7
+10
+4
+6
+11
+3
+13
+17
+15
+0
+14
+16
+5
+1
+12
+2
+9
+ * Serving Flask app "argunest_api" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit)
+[2021-03-15 10:09:53,931] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [15/Mar/2021 10:09:53] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:09:53] "POST /def HTTP/1.1" 500 -
+[2021-03-15 10:09:53,933] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [15/Mar/2021 10:09:53] "POST /pmi HTTP/1.1" 500 -
+[2021-03-15 10:10:19,256] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [15/Mar/2021 10:10:19] "POST /def HTTP/1.1" 500 -
+[2021-03-15 10:10:19,257] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [15/Mar/2021 10:10:19] "POST /pmi HTTP/1.1" 500 -
+127.0.0.1 - - [15/Mar/2021 10:10:19] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:10:58] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:10:58] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:11:00] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:11:00] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:11:03] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:11:03] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:11:09] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:11:09] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:11:11] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:11:11] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:11] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:11] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:20] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:20] "POST /relation HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:29] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:33] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:33] "POST /relation HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:41] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:46] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:47] "POST /relation HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:51] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:58] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/Mar/2021 10:12:58] "POST /relation HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:36] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:37] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:39] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:39] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:42] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:42] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:47] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:47] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:52] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:52] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:55] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:55] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:57] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:14:57] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:09] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:09] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:12] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:12] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:42] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:42] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:43] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:43] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:53] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:53] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:57] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:22:57] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:23:23] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:23:23] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:23:27] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:23:27] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:24:44] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:24:44] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:24:47] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [21/Mar/2021 15:24:47] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:11:22] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:11:22] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:11:26] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:11:26] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:11:29] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:11:29] "POST /log HTTP/1.1" 200 -
+[2021-03-28 08:11:38,400] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [28/Mar/2021 08:11:38] "POST /def HTTP/1.1" 500 -
+127.0.0.1 - - [28/Mar/2021 08:11:38] "POST /log HTTP/1.1" 200 -
+[2021-03-28 08:11:38,984] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [28/Mar/2021 08:11:38] "POST /pmi HTTP/1.1" 500 -
+127.0.0.1 - - [28/Mar/2021 08:11:59] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:11:59] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:12:00] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:12:00] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:12:00] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:12:02] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:12:02] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:12:06] "POST /log HTTP/1.1" 200 -
+[2021-03-28 08:12:06,165] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [28/Mar/2021 08:12:06] "POST /def HTTP/1.1" 500 -
+[2021-03-28 08:12:06,198] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [28/Mar/2021 08:12:06] "POST /pmi HTTP/1.1" 500 -
+127.0.0.1 - - [28/Mar/2021 08:12:10] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:12:11] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:13:01] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:13:01] "POST /log HTTP/1.1" 200 -
+{u'_type': u'doc', u'_source': {u'password': u'379fc0d5299a71ac0f171fbb5afb262829b4e765', u'email': u'ma'}, u'_index': u'argunest_users', u'_version': 1, u'found': True, u'_id': u'b74df323e3939b563635a2cba7a7afba'}
+{u'_type': u'doc', u'_source': {u'password': u'379fc0d5299a71ac0f171fbb5afb262829b4e765', u'email': u'ma'}, u'_index': u'argunest_users', u'_version': 1, u'found': True, u'_id': u'b74df323e3939b563635a2cba7a7afba'}
+{'cbb13caedc94fb2d9369e556dc5bbb97': {'valid': True, 'uid': 'b74df323e3939b563635a2cba7a7afba'}}
+logged b74df323e3939b563635a2cba7a7afba-1615802925863
+logged b74df323e3939b563635a2cba7a7afba-1615802927562
+logged b74df323e3939b563635a2cba7a7afba-1615802939017
+logged b74df323e3939b563635a2cba7a7afba-1615802942115
+logged b74df323e3939b563635a2cba7a7afba-1615802955815
+logged b74df323e3939b563635a2cba7a7afba-1615802993901
+logged b74df323e3939b563635a2cba7a7afba-1615803019237
+logged b74df323e3939b563635a2cba7a7afba-1615803058545
+logged b74df323e3939b563635a2cba7a7afba-1615803060213
+logged b74df323e3939b563635a2cba7a7afba-1615803063308
+logged b74df323e3939b563635a2cba7a7afba-1615803069636
+logged b74df323e3939b563635a2cba7a7afba-1615803071200
+{u'doc'logged b74df323e3939b563635a2cba7a7afba-1615803131241
+: u'22', u'key': u'cbb13caedc94fb2d9369e556dc5bbb97'}
+logged b74df323e3939b563635a2cba7a7afba-1615803140272
+logged b74df323e3939b563635a2cba7a7afba-1615803149916
+logged b74df323e3939b563635a2cba7a7afba-1615803153373
+logged b74df323e3939b563635a2cba7a7afba-1615803161053
+logged b74df323e3939b563635a2cba7a7afba-1615803166960
+logged b74df323e3939b563635a2cba7a7afba-1615803171334
+logged b74df323e3939b563635a2cba7a7afba-1615803178885
+{u'_type': u'doc', u'_source': {u'password': u'379fc0d5299a71ac0f171fbb5afb262829b4e765', u'email': u'ma'}, u'_index': u'argunest_users', u'_version': 1, u'found': True, u'_id': u'b74df323e3939b563635a2cba7a7afba'}
+{'5d80ccf2e82379838a07d21c36fde4f6': {'valid': True, 'uid': 'b74df323e3939b563635a2cba7a7afba'}, 'cbb13caedc94fb2d9369e556dc5bbb97': {'valid': False}}
+logged b74df323e3939b563635a2cba7a7afba-1616339677040
+logged b74df323e3939b563635a2cba7a7afba-1616339679797
+logged b74df323e3939b563635a2cba7a7afba-1616339682270
+logged b74df323e3939b563635a2cba7a7afba-1616339687595
+logged b74df323e3939b563635a2cba7a7afba-1616339692036
+logged b74df323e3939b563635a2cba7a7afba-1616339695542
+logged b74df323e3939b563635a2cba7a7afba-1616339697835
+logged b74df323e3939b563635a2cba7a7afba-1616340129095
+logged b74df323e3939b563635a2cba7a7afba-1616340132855
+logged b74df323e3939b563635a2cba7a7afba-1616340162317
+logged b74df323e3939b563635a2cba7a7afba-1616340163745
+logged b74df323e3939b563635a2cba7a7afba-1616340173711
+logged b74df323e3939b563635a2cba7a7afba-1616340177338
+logged b74df323e3939b563635a2cba7a7afba-1616340203695
+logged b74df323e3939b563635a2cba7a7afba-1616340207581
+logged b74df323e3939b563635a2cba7a7afba-1616340284383
+logged b74df323e3939b563635a2cba7a7afba-1616340287487
+{u'_type': u'doc', u'_source': {u'password': u'45ba762090298100f763814442cecf16d8c9f281', u'email': u'i.kyvernitou1@nuigalway.ie'}, u'_index': u'argunest_users', u'_version': 1, u'found': True, u'_id': u'bfd2d3677657202754880deb7fc0f01f'}
+{'79fef71ac2f2f28794d116b89a0b3a67': {'valid': True, 'uid': 'bfd2d3677657202754880deb7fc0f01f'}, '5d80ccf2e82379838a07d21c36fde4f6': {'valid': True, 'uid': 'b74df323e3939b563635a2cba7a7afba'}, 'cbb13caedc94fb2d9369e556dc5bbb97': {'valid': False}}
+logged bfd2d3677657202754880deb7fc0f01f-1616915482690
+logged bfd2d3677657202754880deb7fc0f01f-1616915486426
+logged bfd2d3677657202754880deb7fc0f01f-1616915489199
+logged bfd2d3677657202754880deb7fc0f01f-1616915498378
+logged bfd2d3677657202754880deb7fc0f01f-1616915519122
+{u'doc': u'lt1', u'key': u'79fef71ac2f2f28794d116b89a0b3a67'}
+logged bfd2d3677657202754880deb7fc0f01f-1616915520011
+logged bfd2d3677657202754880deb7fc0f01f-1616915520012
+logged bfd2d3677657202754880deb7fc0f01f-1616915522867
+logged bfd2d3677657202754880deb7fc0f01f-1616915526077
+logged bfd2d3677657202754880deb7fc0f01f-1616915530935
+logged bfd2d3677657202754880deb7fc0f01f-1616915581282
+lo127.0.0.1 - - [28/Mar/2021 08:13:05] "POST /log HTTP/1.1" 200 -
+[2021-03-28 08:13:05,678] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [28/Mar/2021 08:13:05] "POST /def HTTP/1.1" 500 -
+[2021-03-28 08:13:06,485] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [28/Mar/2021 08:13:06] "POST /pmi HTTP/1.1" 500 -
+127.0.0.1 - - [28/Mar/2021 08:13:20] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [28/Mar/2021 08:13:21] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:33:51] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:33:57] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:33:58] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:34:01] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:34:01] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:34:12] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:34:12] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:34:19] "POST /log HTTP/1.1" 200 -
+[2021-03-30 13:34:19,767] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [30/Mar/2021 13:34:19] "POST /def HTTP/1.1" 500 -
+[2021-03-30 13:34:20,354] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [30/Mar/2021 13:34:20] "POST /pmi HTTP/1.1" 500 -
+127.0.0.1 - - [30/Mar/2021 13:44:35] "POST /log HTTP/1.1" 200 -
+[2021-03-30 13:44:35,907] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [30/Mar/2021 13:44:35] "POST /def HTTP/1.1" 500 -
+[2021-03-30 13:44:36,479] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [30/Mar/2021 13:44:36] "POST /pmi HTTP/1.1" 500 -
+127.0.0.1 - - [30/Mar/2021 13:47:25] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 13:47:25] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:21:37] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:21:37] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:22:04] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:22:11] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:22:13] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:22:13] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:22:15] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:22:15] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 14:22:36] "POST /log HTTP/1.1" 200 -
+[2021-03-30 14:22:36,068] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [30/Mar/2021 14:22:36] "POST /def HTTP/1.1" 500 -
+[2021-03-30 14:22:36,264] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [30/Mar/2021 14:22:36] "POST /pmi HTTP/1.1" 500 -
+[2021-03-30 14:22:41,539] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [30/Mar/2021 14:22:41] "POST /def HTTP/1.1" 500 -
+127.0.0.1 - - [30/Mar/2021 14:22:41] "POST /log HTTP/1.1" 200 -
+[2021-03-30 14:22:41,831] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [30/Mar/2021 14:22:41] "POST /pmi HTTP/1.1" 500 -
+127.0.0.1 - - [30/Mar/2021 14:22:43] "POST /log HTTP/1.1" 200 -
+[2021-03-30 14:22:43,390] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [30/Mar/2021 14:22:43] "POST /def HTTP/1.1" 500 -
+[2021-03-30 14:22:43,928] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [30/Mar/2021 14:22:43] "POST /pmi HTTP/1.1" 500 -
+[2021-03-30 14:22:48,848] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [30/Mar/2021 14:22:48] "POST /def HTTP/1.1" 500 -
+127.0.0.1 - - [30/Mar/2021 14:22:48] "POST /log HTTP/1.1" 200 -
+[2021-03-30 14:22:49,049] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [30/Mar/2021 14:22:49] "POST /pmi HTTP/1.1" 500 -
+[2021-03-30 15:46:07,975] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [30/Mar/2021 15:46:07] "POST /def HTTP/1.1" 500 -
+127.0.0.1 - - [30/Mar/2021 15:46:07] "POST /log HTTP/1.1" 200 -
+[2021-03-30 15:46:08,218] ERROR in app: Exception on /pmi [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 72, in load_text
+    N=r.json()['count']
+KeyError: 'count'
+127.0.0.1 - - [30/Mar/2021 15:46:08] "POST /pmi HTTP/1.1" 500 -
+127.0.0.1 - - [30/Mar/2021 15:46:22] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:22] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:22] "POST /annotation HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:22] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:24] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:24] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:24] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:24] "POST /annotation HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:24] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:29] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:29] "POST /annotation HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:29] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:29] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:36] "POST /annotation HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:36] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:36] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:36] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:43] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:43] "POST /annotation HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:43] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:43] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:45] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:45] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:45] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:45] "POST /annotation HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:45] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:47] "POST /annotation HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:47] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:47] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:47] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:51] "POST /annotation HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:51] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:51] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:46:51] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:02] "POST /graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:02] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:26] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:41] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:41] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:43] "POST /ann_graph HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:43] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:47] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:47] "POST /annotation/delete HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:53] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:53] "POST /ann_graph HTTP/1.1" 200 -
+gged bfd2d3677657202754880deb7fc0f01f-1616915585574
+logged bfd2d3677657202754880deb7fc0f01f-1616915600974
+{u'_type': u'doc', u'_source': {u'password': u'45ba762090298100f763814442cecf16d8c9f281', u'email': u'i.kyvernitou1@nuigalway.ie'}, u'_index': u'argunest_users', u'_version': 1, u'found': True, u'_id': u'bfd2d3677657202754880deb7fc0f01f'}
+{u'_type': u'doc', u'_source': {u'password': u'45ba762090298100f763814442cecf16d8c9f281', u'email': u'i.kyvernitou1@nuigalway.ie'}, u'_index': u'argunest_users', u'_version': 1, u'found': True, u'_id': u'bfd2d3677657202754880deb7fc0f01f'}
+{'79fef71ac2f2f28794d116b89a0b3a67': {'valid': False}, '5d80ccf2e82379838a07d21c36fde4f6': {'valid': True, 'uid': 'b74df323e3939b563635a2cba7a7afba'}, 'cbb13caedc94fb2d9369e556dc5bbb97': {'valid': False}, '03725a2f82adff156c46addfef83176c': {'valid': True, 'uid': 'bfd2d3677657202754880deb7fc0f01f'}}
+logged bfd2d3677657202754880deb7fc0f01f-1617107638022
+logged bfd2d3677657202754880deb7fc0f01f-1617107641156
+logged bfd2d3677657202754880deb7fc0f01f-1617107652217
+logged bfd2d3677657202754880deb7fc0f01f-1617107659733
+logged bfd2d3677657202754880deb7fc0f01f-1617108275868
+logged bfd2d3677657202754880deb7fc0f01f-1617108445153
+logged bfd2d3677657202754880deb7fc0f01f-1617110497476
+{u'_type': u'doc', u'_source': {u'password': u'379fc0d5299a71ac0f171fbb5afb262829b4e765', u'email': u'ma'}, u'_index': u'argunest_users', u'_version': 1, u'found': True, u'_id': u'b74df323e3939b563635a2cba7a7afba'}
+{'79fef71ac2f2f28794d116b89a0b3a67': {'valid': False}, '5d80ccf2e82379838a07d21c36fde4f6': {'valid': False}, 'cbb13caedc94fb2d9369e556dc5bbb97': {'valid': False}, '03725a2f82adff156c46addfef83176c': {'valid': True, 'uid': 'bfd2d3677657202754880deb7fc0f01f'}, '7ae582ba2b125c7cfa75967e1397823e': {'valid': True, 'uid': 'b74df323e3939b563635a2cba7a7afba'}}
+logged b74df323e3939b563635a2cba7a7afba-1617110531503
+logged b74df323e3939b563635a2cba7a7afba-1617110533577
+logged b74df323e3939b563635a2cba7a7afba-1617110535912
+logged b74df323e3939b563635a2cba7a7afba-1617110556025
+logged b74df323e3939b563635a2cba7a7afba-1617110561512
+logged b74df323e3939b563635a2cba7a7afba-1617110563303
+logged b74df323e3939b563635a2cba7a7afba-1617110568823
+logged b74df323e3939b563635a2cba7a7afba-1617115567954
+logged b74df323e3939b563635a2cba7a7afba-1617115582240
+logged b74df323e3939b563635a2cba7a7afba-1617115582243
+logged b74df323e3939b563635a2cba7a7afba-1617115583985
+logged b74df323e3939b563635a2cba7a7afba-1617115583987
+logged b74df323e3939b563635a2cba7a7afba-1617115584004
+logged b74df323e3939b563635a2cba7a7afba-1617115589073
+logged b74df323e3939b563635a2cba7a7afba-1617115589122
+logged b74df323e3939b563635a2cba7a7afba-1617115596702
+logged b74df323e3939b563635a2cba7a7afba-1617115596709
+logged b74df323e3939b563635a2cba7a7afba-1617115603465
+logged b74df323e3939b563635a2cba7a7afba-1617115603467
+logged b74df323e3939b563635a2cba7a7afba-1617115604984
+logged b74df323e3939b563635a2cba7a7afba-1617115604996
+logged b74df323e3939b563635a2cba7a7afba-1617115604998
+logged b74df323e3939b563635a2cba7a7afba-1617115607690
+logged b74df323e3939b563635a2cba7a7afba-1617115607697
+logged b74df323e3939b563635a2cba7a7afba-1617115610994
+logged b74df323e3939b563635a2cba7a7afba-1617115610995
+logged b74df323e3939b563635a2cba7a7afba-1617115622210
+{u'doc': u'lt123', u'key': u'7ae582ba2b125c7cfa75967e1397823e'}
+logged b74df323e3939b563635a2cba7a7afba-1617115646634
+logged b74df323e3939b563635a2cba7a7afba-1617115661268
+logged b74df323e3939b563635a2cba7a7afba-1617115663386
+logged b74df323e3939b563635a2cba7a7afba-1617115667438
+{u'_type': u'doc', u'_index': u'argunest_annotations', u'_shards': {u'successful': 1, u'failed': 0, u'total': 2}, u'_version': 4, u'result': u'deleted', u'found': True, u'_id': u'7ae582ba2b125c7cfa75967e1397823e-lt123-2593414412'}
+logged b74df323e3939b563635a2cba7a7afba-1617115673603
+logged b74df323e3939b563635a2cba7a7afba-1617115675218
+{u'_type': u'doc', u'_index': u'argunest_annotations', u'_shards': {u'successful': 1, u'failed': 0, u'total': 2}, u'_version': 6, u'result': u'deleted', u'found': True, u'_id': u'7ae582b127.0.0.1 - - [30/Mar/2021 15:47:55] "POST /annotation/delete HTTP/1.1" 200 -
+127.0.0.1 - - [30/Mar/2021 15:47:55] "POST /log HTTP/1.1" 200 -

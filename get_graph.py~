@@ -14,15 +14,15 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 userkeys = {}
 
 def get_doc(index, id):    
-    r=requests.get('http://localhost:9200/'+index+'/doc/'+id)
+    r=requests.get('http://localhost:9200/'+index+'/_doc/'+id)
     return json.loads(r.text)
 
 def create_doc(index, id, obj):    
-    r=requests.put('http://localhost:9200/'+index+'/doc/'+id, json=obj)
+    r=requests.put('http://localhost:9200/'+index+'/_doc/'+id, json=obj)
     return json.loads(r.text)
 
 def delete_doc(index, id):    
-    r=requests.delete('http://localhost:9200/'+index+'/doc/'+id)
+    r=requests.delete('http://localhost:9200/'+index+'/_doc/'+id)
     return json.loads(r.text)
 
 def search(index, query, size):
@@ -392,8 +392,7 @@ def login():
     data = request.get_json(silent=True)
     uid = hashlib.md5(data["email"].encode('utf-8')).hexdigest()
     d = get_doc('argunest_users', uid)
-    print(d)
-    if "found" not in d:
+    if not d["found"]:
         response_obj = {'error': 'user or password incorrect'}
     else:        
         passwd1 = hashlib.sha1(data["password"].encode('utf-8')).hexdigest()

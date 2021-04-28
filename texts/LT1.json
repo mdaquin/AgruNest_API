@@ -1,0 +1,21 @@
+{"took":0,"timed_out":false,"_shards":{"total":1,"successful":1,"skipped":0,"failed":0},"hits":{"total":{"value":1,"relation":"eq"},"max_score":1.0,"hits":[{"_index":"argunest_texts","_type":"_doc","_id":"lt1","_score":1.0,"_source":
+{
+    "path": "texts/LT1.txt", 
+    "title": "Letters concerning the love of God between the author of the Proposal to the ladies and Mr. John Norris, wherein his late discourse, shewing that it ought to be intire and exclusive of all other loves, is further cleared and justified / published by J. Norris.",
+    "taxonomy": [
+       {"label": "Charity", "dbp_uri": "http://dbpedia.org/resource/Charity_(virtue)", "wdid": "Q456673"},
+       {"label": "Cause", "dbp_uri": "http://dbpedia.org/resource/Four_causes", "wdid": "Q3140529"},
+       {"label": "Occasionalism", "dbp_uri": "http://dbpedia.org/resource/Occasionalism", "wdid": "Q651345"},
+       {"label": "Desire ", "dbp_uri": "http://dbpedia.org/resource/Desire", "wdid": "Q775842"},
+       {"label": "God ", "dbp_uri": "http://dbpedia.org/resource/God", "wdid": "Q190"},
+       {"label": "Love ", "dbp_uri": "http://dbpedia.org/resource/Love", "wdid": "Q316"},
+       {"label": "Love of God", "dbp_uri": "http://dbpedia.org/resource/Love_of_God", "wdid": "Q967441"},
+       {"label": "Pain ", "dbp_uri": "http://dbpedia.org/resource/Pain_(philosophy)", "wdid": "Q4358242"},
+       {"label": "Pleasure ", "dbp_uri": "http://dbpedia.org/resource/Pleasure#Philosophies_of_pleasure", "wdid": "Q208195"},
+       {"label": "Sensation ", "dbp_uri": "http://dbpedia.org/resource/Sensation_(psychology)", "wdid": "Q3955369"},
+       {"label": "Soul ", "dbp_uri": "http://dbpedia.org/resource/Soul", "wdid": "Q9165"},
+       {"label": "Will of God ", "dbp_uri": "http://dbpedia.org/resource/Will_of_God", "wdid": "Q8003236"},
+       {"label": "Sociability", "dbp_uri": "http://dbpedia.org/resource/Sociality", "wdid": "Q3307505"},
+       {"label": "Object", "dbp_uri": "http://dbpedia.org/resource/Object_(philosophy)", "wdid": "Q488383"}
+     ]
+}}]}}
