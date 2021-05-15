@@ -996,3 +996,40 @@ logged b74df323e3939b563635a2cba7a7afba-1617115673603
 logged b74df323e3939b563635a2cba7a7afba-1617115675218
 {u'_type': u'doc', u'_index': u'argunest_annotations', u'_shards': {u'successful': 1, u'failed': 0, u'total': 2}, u'_version': 6, u'result': u'deleted', u'found': True, u'_id': u'7ae582b127.0.0.1 - - [30/Mar/2021 15:47:55] "POST /annotation/delete HTTP/1.1" 200 -
 127.0.0.1 - - [30/Mar/2021 15:47:55] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:19:14] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:19:14] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:19:20] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:19:20] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:19:21] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:19:21] "POST /text HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:22:40] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:22:40] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:22:45] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:22:45] "POST /texts HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:22:46] "POST /text HTTP/1.1" 200 -
+[2021-05-15 12:22:50,085] ERROR in app: Exception on /def [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python2.7/dist-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "pmi_api.py", line 54, in definition
+    dtext = r.json()["_source"]["text"]
+KeyError: '_source'
+127.0.0.1 - - [15/May/2021 12:22:50] "POST /def HTTP/1.1" 500 -
+127.0.0.1 - - [15/May/2021 12:29:02] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:29:05] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:29:08] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:29:10] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:29:15] "POST /log HTTP/1.1" 200 -
+127.0.0.1 - - [15/May/2021 12:29:25] "POST /log HTTP/1.1" 200 -

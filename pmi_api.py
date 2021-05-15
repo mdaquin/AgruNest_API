@@ -11,6 +11,8 @@ app = Flask('argunest_api')
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+dbp_index = '/home/matdaq/dbpedia_index/'
+
 wdtermcache = {}
 caches = []
 countcache = {}
@@ -49,9 +51,10 @@ def definition():
     wd_id = data["id"].encode('utf-8')
     uri = 'http://wikidata.dbpedia.org/resource/'+wd_id
     id = hashlib.md5(uri).hexdigest()
-    r = requests.get('http://localhost:9200/dbpedia_abstracts/_doc/'+id)
-    # print(r.json())
-    dtext = r.json()["_source"]["text"]
+    dtext = ''
+    with open(dbp_index+id[0]+'/'+id[1]+'/'+id[2]+'/'+id[3]) as f:
+        data = json.load(f)
+        dtext = data[id]
     response = app.response_class(
         response=json.dumps({"definition": dtext}),
         status=200,

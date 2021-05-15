@@ -1,5 +1,0 @@
-import sys
-
-if len(sys.argv) != 2:
-    print("give file name")
-    sys.exit(0)
